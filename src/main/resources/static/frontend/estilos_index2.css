@@ -1,0 +1,345 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    height: 100vh;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Fondo del campo de fútbol */
+.field-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #228B22 0%, #32CD32 50%, #228B22 100%);
+    opacity: 0.3;
+    z-index: 1;
+}
+
+.field-lines {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 60%;
+    border: 3px solid rgba(255, 255, 255, 0.6);
+    border-radius: 15px;
+}
+
+.field-lines::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 150px;
+    border: 3px solid rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+}
+
+.field-lines::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.6);
+}
+
+/* Animación principal */
+.main-animation {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+}
+
+/* Balón de fútbol animado */
+.soccer-ball {
+    position: absolute;
+    top: -200px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: ballBounce 3s ease-in-out infinite;
+}
+
+.ball {
+    width: 80px;
+    height: 80px;
+    background: #fff;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    animation: ballRotate 2s linear infinite;
+}
+
+.pentagon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background: #000;
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+}
+
+.hexagon {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: #000;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
+
+.hex1 { top: 10px; left: 20px; }
+.hex2 { top: 50px; left: 45px; }
+.hex3 { top: 10px; right: 20px; }
+
+@keyframes ballBounce {
+    0%, 100% { transform: translateX(-50%) translateY(0) scale(1); }
+    25% { transform: translateX(-50%) translateY(-50px) scale(0.9); }
+    50% { transform: translateX(-50%) translateY(-100px) scale(0.8); }
+    75% { transform: translateX(-50%) translateY(-50px) scale(0.9); }
+}
+
+@keyframes ballRotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Título principal */
+.main-title {
+    font-size: 4rem;
+    font-weight: bold;
+    margin: 100px 0 20px 0;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+}
+
+.letter {
+    display: inline-block;
+    color: #fff;
+    animation: letterFloat 2s ease-in-out infinite;
+    animation-delay: calc(var(--i) * 0.1s);
+}
+
+.letter:nth-child(1) { --i: 1; color: #FFD700; }
+.letter:nth-child(2) { --i: 2; color: #FF6B35; }
+.letter:nth-child(3) { --i: 3; color: #F7931E; }
+.letter:nth-child(4) { --i: 4; color: #FFD700; }
+.letter:nth-child(5) { --i: 5; color: #FF6B35; }
+.letter:nth-child(6) { --i: 6; color: #F7931E; }
+.letter:nth-child(8) { --i: 7; color: #FFD700; }
+.letter:nth-child(9) { --i: 8; color: #FF6B35; }
+.letter:nth-child(10) { --i: 9; color: #F7931E; }
+
+.space {
+    width: 20px;
+    display: inline-block;
+}
+
+@keyframes letterFloat {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Subtítulo */
+.subtitle {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: fadeInUp 1s ease-out 0.5s both;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Botón de entrada */
+.enter-btn {
+    position: relative;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(45deg, #FF6B35, #F7931E);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(255, 107, 53, 0.4);
+    animation: pulseButton 2s ease-in-out infinite;
+}
+
+.enter-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 107, 53, 0.6);
+}
+
+.btn-animation {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.enter-btn:hover .btn-animation {
+    left: 100%;
+}
+
+@keyframes pulseButton {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+/* Partículas flotantes */
+.particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    animation: particleFloat 8s linear infinite;
+}
+
+.particle:nth-child(1) {
+    left: 10%;
+    animation-delay: 0s;
+    animation-duration: 8s;
+}
+
+.particle:nth-child(2) {
+    left: 20%;
+    animation-delay: 1s;
+    animation-duration: 10s;
+}
+
+.particle:nth-child(3) {
+    left: 30%;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.particle:nth-child(4) {
+    left: 70%;
+    animation-delay: 3s;
+    animation-duration: 9s;
+}
+
+.particle:nth-child(5) {
+    left: 80%;
+    animation-delay: 4s;
+    animation-duration: 11s;
+}
+
+.particle:nth-child(6) {
+    left: 90%;
+    animation-delay: 5s;
+    animation-duration: 7s;
+}
+
+@keyframes particleFloat {
+    0% {
+        transform: translateY(100vh) scale(0);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100px) scale(1);
+        opacity: 0;
+    }
+}
+
+/* Efectos de césped */
+.grass-effects {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    z-index: 3;
+}
+
+.grass {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(to top, rgba(34, 139, 34, 0.8), transparent);
+    animation: grassWave 4s ease-in-out infinite;
+}
+
+.grass1 { animation-delay: 0s; }
+.grass2 { animation-delay: 1s; opacity: 0.5; }
+.grass3 { animation-delay: 2s; opacity: 0.3; }
+
+@keyframes grassWave {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-5px); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 2.5rem;
+    }
+
+    .subtitle {
+        font-size: 1.2rem;
+    }
+
+    .enter-btn {
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
+
+    .ball {
+        width: 60px;
+        height: 60px;
+    }
+}

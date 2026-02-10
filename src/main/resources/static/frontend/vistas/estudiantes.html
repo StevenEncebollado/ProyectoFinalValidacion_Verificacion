@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MF9VFBTS');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudiantes</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MF9VFBTS"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div id="topbar"></div> <!-- Contenedor para la topbar -->
+
+<div class="contenido">
+    <h1>Estudiantes</h1>
+
+    <!-- Formulario para agregar/editar estudiantes -->
+    <form id="estudiantesForm">
+        <div class="form-group">
+            <label for="idEscuela">ID Escuela:</label>
+            <input type="number" id="idEscuela" name="idEscuela" required>
+        </div>
+
+        <div class="form-group">
+            <label for="idDireccion">ID Dirección:</label>
+            <input type="number" id="idDireccion" name="idDireccion" required>
+        </div>
+
+        <div class="form-group">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+        </div>
+
+        <div class="form-group">
+            <label for="segundoNombre">Segundo Nombre:</label>
+            <input type="text" id="segundoNombre" name="segundoNombre">
+        </div>
+
+        <div class="form-group">
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" required>
+        </div>
+
+        <div class="form-group">
+            <label for="numeroCelular">Número de Celular:</label>
+            <input type="number" id="numeroCelular" name="numeroCelular" required>
+        </div>
+
+        <div class="form-group">
+            <label for="correoElectronico">Correo Electrónico:</label>
+            <input type="email" id="correoElectronico" name="correoElectronico" required>
+        </div>
+
+        <div class="form-group">
+            <label for="fechaPrimerAlquiler">Fecha de Primer Alquiler:</label>
+            <input type="date" id="fechaPrimerAlquiler" name="fechaPrimerAlquiler" required>
+        </div>
+
+        <div class="form-group">
+            <label for="fechaSalidaUniversidad">Fecha de Salida de la Universidad:</label>
+            <input type="date" id="fechaSalidaUniversidad" name="fechaSalidaUniversidad">
+        </div>
+
+        <div class="form-group">
+            <label for="saldoActual">Saldo Actual Derivado:</label>
+            <input type="number" step="0.01" id="saldoActual" name="saldoActual" required>
+        </div>
+
+        <div class="form-group">
+            <label for="otrosDetalles">Otros Detalles:</label>
+            <textarea id="otrosDetalles" name="otrosDetalles"></textarea>
+        </div>
+
+        <button type="submit">Guardar</button>
+    </form>
+
+    <!-- Tabla para mostrar los datos -->
+    <table id="estudiantesTable">
+        <thead>
+        <tr>
+            <th>ID Estudiante</th>
+            <th>ID Escuela</th>
+            <th>ID Dirección</th>
+            <th>Nombre</th>
+            <th>Segundo Nombre</th>
+            <th>Apellido</th>
+            <th>Número de Celular</th>
+            <th>Correo Electrónico</th>
+            <th>Fecha de Primer Alquiler</th>
+            <th>Fecha de Salida</th>
+            <th>Saldo Actual</th>
+            <th>Otros Detalles</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- Los datos se llenarán dinámicamente con JavaScript -->
+        </tbody>
+    </table>
+</div>
+
+<script src="../script.js"></script>
+<script src="js/estudiante.js"></script> <!-- Cambiado a estudiante.js -->
+</body>
+</html>

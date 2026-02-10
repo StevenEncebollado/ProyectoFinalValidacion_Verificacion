@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MF9VFBTS');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Direcciones</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MF9VFBTS"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div id="topbar"></div> <!-- Contenedor para la topbar -->
+
+<div class="contenido">
+    <h1>Direcciones</h1>
+
+    <!-- Formulario para agregar/editar direcciones -->
+    <form id="direccionesForm">
+        <div class="form-group">
+            <label for="linea1">Línea 1 (Número de Edificio):</label>
+            <input type="number" id="linea1" name="linea1" required>
+        </div>
+
+        <div class="form-group">
+            <label for="linea2">Línea 2 (Número de Calle):</label>
+            <input type="number" id="linea2" name="linea2" required>
+        </div>
+
+        <div class="form-group">
+            <label for="areaLocalidad">Área de Localidad:</label>
+            <input type="text" id="areaLocalidad" name="areaLocalidad" required>
+        </div>
+
+        <div class="form-group">
+            <label for="ciudad">Ciudad:</label>
+            <input type="text" id="ciudad" name="ciudad" required>
+        </div>
+
+        <div class="form-group">
+            <label for="codigoPostal">Código Postal:</label>
+            <input type="number" id="codigoPostal" name="codigoPostal" required>
+        </div>
+
+        <div class="form-group">
+            <label for="estado">Estado/Provincia:</label>
+            <input type="text" id="estado" name="estado" required>
+        </div>
+
+        <div class="form-group">
+            <label for="pais">País:</label>
+            <input type="text" id="pais" name="pais" required>
+        </div>
+
+        <div class="form-group">
+            <label for="otrosDetalles">Otros Detalles:</label>
+            <textarea id="otrosDetalles" name="otrosDetalles"></textarea>
+        </div>
+
+        <button type="submit">Guardar</button>
+    </form>
+
+    <!-- Tabla para mostrar los datos -->
+    <table id="direccionesTable">
+        <thead>
+        <tr>
+            <th>ID Dirección</th>
+            <th>Línea 1 (Edificio)</th>
+            <th>Línea 2 (Calle)</th>
+            <th>Área de Localidad</th>
+            <th>Ciudad</th>
+            <th>Código Postal</th>
+            <th>Estado/Provincia</th>
+            <th>País</th>
+            <th>Otros Detalles</th>
+            <th>Acciones</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- Los datos se llenarán dinámicamente con JavaScript -->
+        </tbody>
+    </table>
+</div>
+
+<script src="../script.js"></script>
+<script src="js/direcciones.js"></script>
+</body>
+</html>

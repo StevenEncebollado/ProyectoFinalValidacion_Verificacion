@@ -1,0 +1,37 @@
+.contenido-principal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  min-height: 80vh;
+  background: linear-gradient(to right, #f2f2f2, #d9f0ff);
+}
+
+.bienvenida {
+  text-align: center;
+  max-width: 600px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.bienvenida h1 {
+  color: #004d99;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.bienvenida p {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.ilustracion {
+  font-size: 2rem;
+  margin-top: 20px;
+}
+
+
+

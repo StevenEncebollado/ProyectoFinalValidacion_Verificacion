@@ -1,0 +1,87 @@
+body {
+    background: linear-gradient(135deg, #228B22 0%, #32CD32 100%); /* Fondo verde césped */
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 40px;
+    color: #FFD700; /* Dorado brillante para títulos */
+}
+
+form {
+    background-color: #1a871e;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 600px;
+    margin: 20px auto;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: none;
+    background-color: #fff;
+    color: #000;
+}
+
+button {
+    padding: 12px 25px;
+    background: linear-gradient(45deg, #FF6B35, #F7931E);
+    border: none;
+    border-radius: 25px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background: #FF6B35;
+    transform: translateY(-2px);
+}
+
+table {
+    width: 90%;
+    margin: 40px auto;
+    border-collapse: collapse;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo claro para contraste */
+    color: #000; /* Color negro para texto */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+th {
+    background-color: #fff; /* Fondo blanco para encabezados */
+    color: #000; /* Letras negras */
+}
+
+
+.topbar {
+    background-color: #f7931e;
+    padding: 10px;
+    text-align: center;
+}
+
+.topbar a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.topbar a:hover {
+    color: #ffffffcc; /* Blanco con un toque de transparencia */
+    text-decoration: underline;
+}

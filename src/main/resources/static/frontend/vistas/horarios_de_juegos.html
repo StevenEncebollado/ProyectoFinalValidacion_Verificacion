@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MF9VFBTS');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Horarios de Juegos</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MF9VFBTS"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div id="topbar"></div> <!-- Contenedor para la topbar -->
+
+<div class="contenido">
+    <h1>Gestión de Horarios de Juegos</h1>
+
+    <!-- Formulario para agregar/editar horarios -->
+    <form id="horarioForm">
+        <input type="hidden" id="idJuego" name="idJuego">
+        <div class="form-group">
+            <label for="tipoJuego">Código de Tipo de Juego:</label>
+            <input type="number" id="tipoJuego" name="tipoJuego" required>
+        </div>
+
+        <div class="form-group">
+            <label for="idEscuela">ID Escuela:</label>
+            <input type="number" id="idEscuela" name="idEscuela" required>
+        </div>
+
+        <div class="form-group">
+            <label for="nombreOponente">Nombre del Oponente:</label>
+            <input type="text" id="nombreOponente" name="nombreOponente" required>
+        </div>
+
+        <div class="form-group">
+            <label for="fechaHora">Fecha y Hora:</label>
+            <input type="datetime-local" id="fechaHora" name="fechaHora" required>
+        </div>
+
+        <div class="form-group">
+            <label for="resultado">Resultado del Juego:</label>
+            <input type="text" id="resultado" name="resultado">
+        </div>
+
+        <div class="form-group">
+            <label for="otrosDetalles">Otros Detalles:</label>
+            <textarea id="otrosDetalles" name="otrosDetalles"></textarea>
+        </div>
+
+        <button type="submit">Guardar</button>
+    </form>
+
+    <!-- Tabla para mostrar los horarios -->
+    <table id="horariosTable">
+        <thead>
+        <tr>
+            <th>ID Juego</th>
+            <th>Tipo de Juego</th>
+            <th>ID Escuela</th>
+            <th>Nombre del Oponente</th>
+            <th>Fecha y Hora</th>
+            <th>Resultado</th>
+            <th>Otros Detalles</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- Los datos se llenarán dinámicamente con JavaScript -->
+        </tbody>
+    </table>
+</div>
+
+<script src="../script.js"></script>
+<script src="js/horarios_de_juegos.js"></script>
+</body>
+</html>
